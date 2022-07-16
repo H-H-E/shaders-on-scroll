@@ -1,12 +1,14 @@
-$color-1: #0101ec
+$color-1: #060401
 $color-2: #dd51b1
-$color-black: black
+$color-black: #281c80
 $color-white: white
+
+  
 
 @import url('https://use.typekit.net/zmc8vly.css')
 
 %font-regular
-  font-family: degular-display, sans-serif
+  font-family: regular-display, sans-serif
   font-weight: 400
   font-style: normal
   letter-spacing: .1ch
@@ -19,17 +21,17 @@ $color-white: white
   top: 0
   left: 0
   width: 100%
-  
+
 %fixed
   @extend %top
-  
+
   position: fixed
-  
+
 %absolute
   @extend %top
-  
+
   position: absolute
-  
+
 *
   margin: 0
   padding: 0
@@ -44,22 +46,22 @@ body
   color: $color-white
   background-color: $color-black
   line-height: 1.2
-  
+
   &::-webkit-scrollbar
     display: none
 
 h1,
 h2
   @extend %font-title
-     
+
 canvas.webgl
   @extend %fixed
 
   pointer-events: none
-  mix-blend-mode: screen
+  mix-blend-mode: fade
 
   @media (max-width: 64em)
-      opacity: .7
+    opacity: .7
 
 .scroll
   &__stage
@@ -69,12 +71,12 @@ canvas.webgl
 
     &.js-mobile
       @extend %absolute
-      
+
       height: auto
 
       .scroll__content
         position: relative
-  
+
   &__content
     @extend %absolute
 
@@ -86,8 +88,8 @@ canvas.webgl
   align-items: center
   width: 100%
   min-height: calc(100vh - 7rem)
-  padding: 8rem 
-  
+  padding: 8rem
+
   @media (max-width: 64em)
     flex-direction: column
     justify-content: center
@@ -95,7 +97,7 @@ canvas.webgl
     padding: 10vh 2rem
 
     &:first-of-type
-        gap: 0
+      gap: 0
 
   &:not(:first-of-type)
     .section__title
@@ -104,15 +106,17 @@ canvas.webgl
   &:nth-child(even)
     flex-direction: row-reverse
     background: $color-1
-    
+
     .section__title
       text-align: right
 
     @media (max-width: 64em)
-      flex-direction: column
+      flex-direction: row
 
       .section__paragraph
         align-self: flex-start
+       
+
 
   &__title
     text-align: left
@@ -121,33 +125,33 @@ canvas.webgl
 
     @media (max-width: 64em)
       width: 100%
-    
+
     &-number
       font-size: min(36vw, 24rem)
-      
+
     &-text
       font-size: min(18vw, 12rem)
       padding-left: .1ch
-        
+
     &-arrow
       font-size: min(9vw, 6rem)
-      
+
       color: $color-1
       margin-top: 1ch
       line-height: 1
-      
+
       span
         display: inline-block
         transform: rotate(90deg)
-    
+
   &__paragraph
     align-self: flex-end
-    max-width: 20ch
+    max-width: 50ch
     font-size: 1.4rem
 
     @media (max-width: 64em)
       font-size: 1.2rem
-    
+
   &__button
     @extend %font-regular
 
@@ -165,19 +169,13 @@ canvas.webgl
     &:hover,
     &:focus
       border: 2px solid $color-2
-     
+
 .layout
   &__line
     @extend %fixed
-    
+
     height: 5px
     width: 100%
     background-color: $color-white
     transform: scaleX(0)
-  
-  &__faboolea
-    position: fixed
-    bottom: 3rem
-    height: .5rem
-    width: 100%
-    text-align: center
+

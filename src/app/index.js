@@ -7,6 +7,7 @@ import SmoothScroll from './SmoothScroll'
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
 
+
 class ScrollStage {
   constructor() {
     this.element = document.querySelector('.content')
@@ -39,14 +40,14 @@ class ScrollStage {
       // vertex
       uFrequency: {
         start: 0,
-        end: 4
+        end: 5
       },
       uAmplitude: {
         start: 4,
         end: 4
       },
       uDensity: {
-        start: 1,
+        start: 10,
         end: 1
       },
       uStrength: {
@@ -68,13 +69,14 @@ class ScrollStage {
 
     this.renderer = new THREE.WebGLRenderer({ 
       antialias: true, 
-      alpha: true 
+      alpha: true, 
     })
+    //this.renderer.setClearColor( 0xffffff );
 
     this.canvas = this.renderer.domElement
 
     this.camera = new THREE.PerspectiveCamera( 
-      75, 
+      45, 
       this.viewport.width / this.viewport.height, 
       .1, 
       10
@@ -103,6 +105,7 @@ class ScrollStage {
   init() {
     this.addCanvas()
     this.addCamera()
+    //this.backgroundWhite()
     this.addMesh()
     this.addEventListeners()
     this.onResize()
@@ -120,13 +123,23 @@ class ScrollStage {
   addCamera() {
     this.camera.position.set(0, 0, 2.5)
     this.scene.add(this.camera)
+    
   }
+
 
   /**
    * OBJECT
    */
   addMesh() {
-    this.geometry = new THREE.IcosahedronGeometry(1, 64)
+    //import geometry from GLTF
+  
+
+    //this.geometry = new THREE.IcosahedronGeometry(1, 64)
+    //this.geometry = new THREE.ConeBufferGeometry(1, 1,14, 1, true, 0)
+    this.geometry = new THREE.SphereBufferGeometry(1, 64, 64) 
+
+    //import geometry from gltf
+  
     
     this.material = new THREE.ShaderMaterial({
       wireframe: true,
@@ -148,6 +161,7 @@ class ScrollStage {
     
     this.scene.add(this.mesh)
   }
+ 
 
   /**
    * SCROLL BASED ANIMATIONS
@@ -199,14 +213,14 @@ class ScrollStage {
     // play with it!
     // enable / disable / change x, y, multiplier …
 
-    this.mouse.x = (event.clientX / this.viewport.width).toFixed(2) * 4
+    this.mouse.x = (event.clientX / this.viewport.width).toFixed(2) * 2
     this.mouse.y = (event.clientY / this.viewport.height).toFixed(2) * 2
 
     GSAP.to(this.mesh.material.uniforms.uFrequency, { value: this.mouse.x })
     GSAP.to(this.mesh.material.uniforms.uAmplitude, { value: this.mouse.x })
     GSAP.to(this.mesh.material.uniforms.uDensity, { value: this.mouse.y })
     GSAP.to(this.mesh.material.uniforms.uStrength, { value: this.mouse.y })
-    // GSAP.to(this.mesh.material.uniforms.uDeepPurple, { value: this.mouse.x })
+    //GSAP.to(this.mesh.material.uniforms.uDeepPurple, { value: this.mouse.x })
     // GSAP.to(this.mesh.material.uniforms.uOpacity, { value: this.mouse.y })
 
     console.info(`X: ${this.mouse.x}  |  Y: ${this.mouse.y}`)
@@ -265,4 +279,4 @@ class ScrollStage {
 
 new ScrollStage()
 
-console.log('%c Made by ꜰᴀʙᴏᴏʟᴇᴀ → https://twitter.com/faboolea', 'background: black; color: white; padding: 1ch 2ch; border-radius: 2rem;')
+console.log('background: white; color: black; padding: 1ch 2ch; border-radius: 2rem;')

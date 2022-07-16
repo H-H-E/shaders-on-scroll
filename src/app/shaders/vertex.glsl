@@ -135,6 +135,8 @@ void main() {
   vec3 pos = position + (normal * distortion);
   float angle = sin(uv.y * uFrequency) * uAmplitude;
   pos = rotateY(pos, angle);    
+
+  
     
   vDistortion = distortion;
 
