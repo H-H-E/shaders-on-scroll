@@ -121,6 +121,7 @@ canvas.webgl {
   text-align: center;
   text-transform: uppercase;
   opacity: .9;
+  padding-top: min(9vw, 6rem);
 }
 
 @media (max-width: 54em) {

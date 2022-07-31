@@ -27,6 +27,22 @@ body {
 .centertext {
 	text-align: center;
 	line-height: normal;
+	/*make it seperate from video in another column*/
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/*give text some padding all around*/
+
+	padding: 10px;
+
+
+
+	
+}
+.centertext .video {
+	width: 100%;
+	height: 100%;
+	display: flex;
 }	
 
 /* Page Loader */
