@@ -30,12 +30,6 @@ body {
   display: flex;
 }
 
-.centertext .video {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
 .js .loading:before, .js .loading:after {
   content: "";
   z-index: 1000;
@@ -189,18 +183,11 @@ a:focus-visible {
 }
 
 .v_container {
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+  box-sizing: content-box;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.list {
-  width: 100%;
+  display: inline-block;
+  transform: scale(.5);
 }
 
 /*# sourceMappingURL=index.275a8ed3.css.map */

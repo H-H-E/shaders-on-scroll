@@ -27,7 +27,7 @@ h1, h2 {
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -104,6 +104,7 @@ canvas.webgl {
 
 .section:nth-child(2n) .section__title {
   text-align: left;
+  padding-bottom: min(9vw, 6rem);
 }
 
 @media (max-width: 64em) {
@@ -122,6 +123,7 @@ canvas.webgl {
   text-transform: uppercase;
   opacity: .9;
   padding-top: min(9vw, 6rem);
+  padding-bottom: min(9vw, 6rem);
 }
 
 @media (max-width: 54em) {
@@ -164,20 +166,22 @@ canvas.webgl {
 }
 
 .section__button {
+  text-align: center;
+  max-width: 33%;
   text-transform: uppercase;
   letter-spacing: .1ch;
   cursor: pointer;
   border: 2px solid;
-  border-radius: 50%;
-  margin: 5ch 0;
-  padding: 2ch 5ch;
+  border-radius: 90%;
+  margin: 2% auto 0;
+  padding: .5rem 1rem;
   font-size: .8em;
   transition: background-color 1s;
-  display: inline-block;
+  display: block;
 }
 
 .section__button:hover, .section__button:focus {
-  border: 2px solid #dd51b1;
+  border: 3px solid #dd51b1;
 }
 
 .layout__line {
