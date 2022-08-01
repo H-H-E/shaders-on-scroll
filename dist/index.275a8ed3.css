@@ -190,17 +190,17 @@ a:focus-visible {
 
 .v_container {
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+  height: 100%;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: relative;
 }
 
-.video {
+.list {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /*# sourceMappingURL=index.275a8ed3.css.map */
