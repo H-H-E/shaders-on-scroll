@@ -207,15 +207,15 @@ a:focus-visible {
 	}
 }
 
-.v_container {
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-	display: inline-block;
-	flex-direction: column;
-	justify-content: center;
-	transform: scale(.5)
-		/* make it a quarter of the section*/
+video {
+	display: block;
+	width: 40vw;
+	--g: #000, #0000 1deg 219deg,#000 220deg;
+	--mask:
+	  conic-gradient(from -155deg at top    4vw left  4vw,var(--g)) 0    0   /51% 100% no-repeat,
+	  conic-gradient(from 25deg at bottom 4vw right 4vw,var(--g)) 100% 100%/51% 100% no-repeat;	
+	-webkit-mask: var(--mask);
+			mask: var(--mask);
 
 
 
