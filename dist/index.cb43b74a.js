@@ -596,7 +596,7 @@ class ScrollStage {
         });
         //this.renderer.setClearColor( 0xffffff );
         this.canvas = this.renderer.domElement;
-        this.camera = new _three.PerspectiveCamera(75, this.viewport.width / this.viewport.height, .1, 10);
+        this.camera = new _three.PerspectiveCamera(45, this.viewport.width / this.viewport.height, .1, 10);
         this.clock = new _three.Clock();
         this.smoothScroll = new _smoothScrollDefault.default({
             element: this.element,
@@ -615,7 +615,7 @@ class ScrollStage {
     init() {
         this.addCanvas();
         this.addCamera();
-        this.backgroundWhite();
+        //this.backgroundWhite()
         this.addMesh();
         this.addEventListeners();
         this.onResize();
@@ -631,17 +631,14 @@ class ScrollStage {
         this.camera.position.set(0, 0, 2.5);
         this.scene.add(this.camera);
     }
-    //change scene background to white
-    backgroundWhite() {
-    //this.scene.background = new THREE.Color(0xffffff)
-    }
     /**
    * OBJECT
    */ addMesh() {
-        //import geometry from GLB
-        const loader = new _three.ObjectLoader();
+        //import geometry from GLTF
         //this.geometry = new THREE.IcosahedronGeometry(1, 64)
-        this.geometry = new _three.ConeBufferGeometry(1, 4);
+        //this.geometry = new THREE.ConeBufferGeometry(1, 1,14, 1, true, 0)
+        this.geometry = new _three.SphereBufferGeometry(1, 64, 64);
+        //import geometry from gltf
         this.material = new _three.ShaderMaterial({
             wireframe: true,
             blending: _three.AdditiveBlending,
@@ -705,7 +702,7 @@ class ScrollStage {
     onMouseMove(event) {
         // play with it!
         // enable / disable / change x, y, multiplier …
-        this.mouse.x = (event.clientX / this.viewport.width).toFixed(2) * 6;
+        this.mouse.x = (event.clientX / this.viewport.width).toFixed(2) * 2;
         this.mouse.y = (event.clientY / this.viewport.height).toFixed(2) * 2;
         _gsapDefault.default.to(this.mesh.material.uniforms.uFrequency, {
             value: this.mouse.x
@@ -719,7 +716,7 @@ class ScrollStage {
         _gsapDefault.default.to(this.mesh.material.uniforms.uStrength, {
             value: this.mouse.y
         });
-        // GSAP.to(this.mesh.material.uniforms.uDeepPurple, { value: this.mouse.x })
+        //GSAP.to(this.mesh.material.uniforms.uDeepPurple, { value: this.mouse.x })
         // GSAP.to(this.mesh.material.uniforms.uOpacity, { value: this.mouse.y })
         console.info(`X: ${this.mouse.x}  |  Y: ${this.mouse.y}`);
     }
