@@ -88,7 +88,7 @@ canvas.webgl
   align-items: center
   width: 100%
   min-height: calc(100vh - 7rem)
-  padding: 7rem 
+  padding: 2rem
 
   @media (max-width: 64em)
     flex-direction: column
@@ -108,7 +108,7 @@ canvas.webgl
     background: $color-1
 
     .section__title
-      text-align: left
+      text-align: center
       padding-bottom: calc(min(9vw, 6rem))
 
       
@@ -130,9 +130,6 @@ canvas.webgl
     /*add some top padding*/
     padding-top: calc(min(9vw, 6rem))
     padding-bottom: calc(min(9vw, 6rem))
-    padding-right: calc(min(9vw, 6rem))
-
-
     @media (max-width: 54em)
       width: 100%
 
@@ -142,7 +139,7 @@ canvas.webgl
     &-text
       font-size: min(13vw, 10rem)
       text-align: center
-      padding-bottom: calc(min(6vw, 3rem))
+      
 
 
     &-arrow
@@ -176,21 +173,22 @@ canvas.webgl
 
     display:  block
     /*center button in section*/
-    margin: 2% auto 0ef
+    margin: 0 auto
     text-align: center
     max-width: 33%
-    padding:0.5rem 1rem
-    border: 2px solid currentColor
-    border-radius: 90%
+    max-height: 10rem
+    padding: 2vw
+     
     font-size: .8em
     text-transform: uppercase
-    letter-spacing: .1ch
-    transition: background-color 1s ease
+    letter-spacing: .2ch
+    transition: border 1s ease
     cursor: pointer
 
     &:hover,
     &:focus
       border: 3px solid $color-2
+      
   /*add video */
 
 
