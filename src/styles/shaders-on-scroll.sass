@@ -20,17 +20,17 @@ $color-white: white
   top: 0
   left: 0
   width: 100%
-  
+
 %fixed
   @extend %top
-  
+
   position: fixed
-  
+
 %absolute
   @extend %top
-  
+
   position: absolute
-  
+
 *
   margin: 0
   padding: 0
@@ -45,14 +45,14 @@ body
   color: $color-white
   background-color: $color-black
   line-height: 1.2
-  
+
   &::-webkit-scrollbar
     display: none
 
 h1,
 h2
   @extend %font-title
-     
+
 canvas.webgl
   @extend %fixed
 
@@ -60,7 +60,7 @@ canvas.webgl
   mix-blend-mode: screen
 
   @media (max-width: 64em)
-      opacity: .7
+    opacity: .7
 
 .scroll
   &__stage
@@ -70,12 +70,12 @@ canvas.webgl
 
     &.js-mobile
       @extend %absolute
-      
+
       height: auto
 
       .scroll__content
         position: relative
-  
+
   &__content
     @extend %absolute
 
@@ -87,8 +87,8 @@ canvas.webgl
   align-items: center
   width: 100%
   min-height: calc(100vh - 7rem)
-  padding: 8rem 
-  
+  padding: 8rem
+
   @media (max-width: 64em)
     flex-direction: column
     justify-content: center
@@ -96,7 +96,7 @@ canvas.webgl
     padding: 10vh 2rem
 
     &:first-of-type
-        gap: 0
+      gap: 0
 
   &:not(:first-of-type)
     .section__title
@@ -105,7 +105,7 @@ canvas.webgl
   &:nth-child(even)
     flex-direction: row-reverse
     background: $color-1
-    
+
     .section__title
       text-align: right
 
@@ -116,31 +116,38 @@ canvas.webgl
         align-self: flex-start
 
   &__title
+  
     text-align: left
     text-transform: uppercase
     opacity: .9
 
     @media (max-width: 64em)
       width: 100%
-    
+
     &-number
       font-size: min(36vw, 24rem)
+
       
+        
+
+
+
+
     &-text
       font-size: min(18vw, 12rem)
       padding-left: .1ch
-        
+
     &-arrow
       font-size: min(9vw, 6rem)
-      
+
       color: $color-1
       margin-top: 1ch
       line-height: 1
-      
+
       span
         display: inline-block
         transform: rotate(90deg)
-    
+
   &__paragraph
     align-self: flex-end
     max-width: 20ch
@@ -148,8 +155,8 @@ canvas.webgl
 
     @media (max-width: 64em)
       font-size: 1.2rem
-    
-  &__button
+
+  &__button, &:modal-btn 
     @extend %font-regular
 
     display: inline-block
@@ -166,19 +173,59 @@ canvas.webgl
     &:hover,
     &:focus
       border: 2px solid $color-2
-     
+
 .layout
   &__line
     @extend %fixed
-    
+
     height: 5px
     width: 100%
     background-color: $color-white
     transform: scaleX(0)
+
+.popup-overlay
   
-  &__faboolea
-    position: fixed
-    bottom: 3rem
-    height: .5rem
-    width: 100%
-    text-align: center
+  position: relative
+  max-width: 20%
+  display: inline
+  background: rgba(0, 0, 0, 0.7)
+  transition: opacity 500ms
+  visibility: hidden
+  opacity: 0
+
+  &:target
+    visibility: visible
+    opacity: 1
+
+.popup
+  margin: 7vw
+  padding: 0vw
+  background: $color-1
+  border-radius: 5px
+  width: 7%
+  position: relative
+  transition: all 5s ease-in-out
+
+  h2
+    margin-top: 0
+
+  .close
+    position: absolute
+  
+    transition: all 200ms
+    font-size: 30px
+    font-weight: bold
+    text-decoration: none
+    color: #333
+
+    &:hover
+      color: #06D85F
+
+  .content
+    max-height: 10%
+    overflow: auto
+
+
+  
+
+
