@@ -217,6 +217,7 @@ a:focus-visible {
 }
 
 video {
+	padding-top: 10%;
 	width: 25vw;
 	display: relative;
 	--g: #000, #0000 1deg 219deg, #000 220deg;

@@ -199,6 +199,7 @@ video {
   -webkit-mask: var(--mask);
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  padding-top: 10%;
 }
 
 ul {
