@@ -156,7 +156,7 @@ canvas.webgl
     @media (max-width: 64em)
       font-size: 1.2rem
 
-  &__button, &:modal-btn 
+  &__button
     @extend %font-regular
 
     display: inline-block
@@ -183,49 +183,6 @@ canvas.webgl
     background-color: $color-white
     transform: scaleX(0)
 
-.popup-overlay
-  
-  position: relative
-  max-width: 20%
-  display: inline
-  background: rgba(0, 0, 0, 0.7)
-  transition: opacity 500ms
-  visibility: hidden
-  opacity: 0
 
-  &:target
-    visibility: visible
-    opacity: 1
-
-.popup
-  margin: 7vw
-  padding: 0vw
-  background: $color-1
-  border-radius: 5px
-  width: 7%
-  position: relative
-  transition: all 5s ease-in-out
-
-  h2
-    margin-top: 0
-
-  .close
-    position: absolute
-  
-    transition: all 200ms
-    font-size: 30px
-    font-weight: bold
-    text-decoration: none
-    color: #333
-
-    &:hover
-      color: #06D85F
-
-  .content
-    max-height: 10%
-    overflow: auto
-
-
-  
 
 

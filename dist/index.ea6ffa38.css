@@ -1,6 +1,6 @@
 @import "https://use.typekit.net/zmc8vly.css";
 @import "https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Corben:wght@700&family=Open+Sans:wght@800&display=swap";
-.section__button, .section:modal-btn, body {
+.section__button, body {
   letter-spacing: .1ch;
   font-family: Catamaran, sans-serif;
   font-style: normal;
@@ -162,7 +162,7 @@ canvas.webgl {
   }
 }
 
-.section__button, .section:modal-btn {
+.section__button {
   text-transform: uppercase;
   letter-spacing: .1ch;
   cursor: pointer;
@@ -175,7 +175,7 @@ canvas.webgl {
   display: inline-block;
 }
 
-.section__button:hover, .section__button:focus, .section:modal-btn:hover, .section:modal-btn:focus {
+.section__button:hover, .section__button:focus {
   border: 2px solid #000;
 }
 
@@ -184,53 +184,6 @@ canvas.webgl {
   width: 100%;
   background-color: #fff;
   transform: scaleX(0);
-}
-
-.popup-overlay {
-  max-width: 20%;
-  visibility: hidden;
-  opacity: 0;
-  background: #000000b3;
-  transition: opacity .5s;
-  display: inline;
-  position: relative;
-}
-
-.popup-overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  width: 7%;
-  background: #101bb652;
-  border-radius: 5px;
-  margin: 7vw;
-  padding: 0;
-  transition: all 5s ease-in-out;
-  position: relative;
-}
-
-.popup h2 {
-  margin-top: 0;
-}
-
-.popup .close {
-  color: #333;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .2s;
-  position: absolute;
-}
-
-.popup .close:hover {
-  color: #06d85f;
-}
-
-.popup .content {
-  max-height: 10%;
-  overflow: auto;
 }
 
 /*# sourceMappingURL=index.ea6ffa38.css.map */

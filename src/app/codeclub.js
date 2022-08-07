@@ -134,8 +134,8 @@ class ScrollStage {
     //import geometry from G
 
     //this.geometry = new THREE.IcosahedronGeometry(1, 64)
-    //this.geometry = new THREE.ConeBufferGeometry(1, 1,14, 1, true, 0)
-    this.geometry = new THREE.BoxBufferGeometry(1, 1, 1)
+    this.geometry = new THREE.ConeBufferGeometry(1, 1,24, 1, true, 0)
+    //this.geometry = new THREE.BoxBufferGeometry(1, 1, 1)
 
 
     //import geometry from gltf
