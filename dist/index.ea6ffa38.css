@@ -100,11 +100,10 @@ canvas.webgl {
 
 .section:nth-child(2n) {
   background: #101bb652;
-  flex-direction: row-reverse;
 }
 
 .section:nth-child(2n) .section__title {
-  text-align: right;
+  text-align: center;
 }
 
 @media (max-width: 64em) {
@@ -118,7 +117,7 @@ canvas.webgl {
 }
 
 .section__title {
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   opacity: .9;
 }
@@ -134,8 +133,11 @@ canvas.webgl {
 }
 
 .section__title-text {
-  padding-left: .1ch;
-  font-size: min(18vw, 12rem);
+  font-size: min(18vw, 6rem);
+}
+
+.section__title-bigtext {
+  font-size: min(36vw, 16rem);
 }
 
 .section__title-arrow {
