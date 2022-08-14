@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"dd8X1":[function(require,module,exports) {
+})({"hzM7f":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "ae62edc4cb43b74a";
+module.bundle.HMR_BUNDLE_ID = "5d5cf8d8c6c1f165";
 function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -525,7 +525,7 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"1l7bB":[function(require,module,exports) {
+},{}],"dIKyP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _three = require("three");
 var _gsap = require("gsap");
@@ -634,10 +634,10 @@ class ScrollStage {
     /**
    * OBJECT
    */ addMesh() {
-        //import geometry from GLTF
+        //import geometry from G
         //this.geometry = new THREE.IcosahedronGeometry(1, 64)
-        //this.geometry = new THREE.ConeBufferGeometry(1, 1,14, 1, true, 0)
-        this.geometry = new _three.BufferGeometry(1, 640, 64);
+        this.geometry = new _three.ConeBufferGeometry(1, 1, 24, 1, true, 0);
+        //this.geometry = new THREE.BoxBufferGeometry(1, 1, 1)
         //import geometry from gltf
         this.material = new _three.ShaderMaterial({
             wireframe: true,
@@ -34222,6 +34222,6 @@ module.exports = "#define GLSLIFY 1\n// GLSL textureless classic 3D noise \"cnoi
 },{}],"213AW":[function(require,module,exports) {
 module.exports = "#define GLSLIFY 1\nuniform float uOpacity;\nuniform float uDeepPurple;\n \nvarying float vDistortion;\n\nvec3 cosPalette(float t, vec3 a, vec3 b, vec3 c, vec3 d) {\n  return a + b * cos(6.28318 * (c * t + d));\n  \n}     \n \nvoid main() {\n  float distort = vDistortion * 3.;\n\n  vec3 brightness = vec3(.1, .1, .9);\n  vec3 contrast = vec3(.3, .3, .3);\n  vec3 oscilation = vec3(.5, .5, .9);\n  vec3 phase = vec3(.9, .1, .8);\n \n  vec3 color = cosPalette(distort, brightness, contrast, oscilation, phase);\n  \n  gl_FragColor = vec4(color, vDistortion);\n  gl_FragColor += vec4(min(uDeepPurple, 1.), 0., .5, min(uOpacity, 1.));\n}\n";
 
-},{}]},["dd8X1","1l7bB"], "1l7bB", "parcelRequire09c7")
+},{}]},["hzM7f","dIKyP"], "dIKyP", "parcelRequire09c7")
 
-//# sourceMappingURL=index.cb43b74a.js.map
+//# sourceMappingURL=sessionStructure.c6c1f165.js.map
