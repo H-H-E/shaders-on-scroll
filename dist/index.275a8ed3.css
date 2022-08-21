@@ -192,20 +192,22 @@ a:focus-visible {
 }
 
 video {
-  width: 25vw;
+  width: 50vw;
   --g: #000, #0000 1deg 219deg, #000 220deg;
   --mask: conic-gradient(from -155deg at top 4vw left 4vw, var(--g) ) 0 0 / 51% 100% no-repeat, conic-gradient(from 25deg at bottom 4vw right 4vw, var(--g) ) 100% 100% / 51% 100% no-repeat;
   -webkit-mask: var(--mask);
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  align-self: center;
   padding-top: 10%;
   display: inline-block;
 }
 
-ul {
-  max-width: 30%;
-  max-height: auto;
-  font-size: 2vw;
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 5vw;
+  list-style: none;
 }
 
 /*# sourceMappingURL=index.275a8ed3.css.map */

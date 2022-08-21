@@ -100,7 +100,7 @@ canvas.webgl {
 
 .section:nth-child(2n) {
   background: #101bb652;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
 .section:nth-child(2n) .section__title {
@@ -113,6 +113,7 @@ canvas.webgl {
   }
 
   .section:nth-child(2n) .section__paragraph {
+    text-align: center;
     align-self: flex-start;
   }
 }
@@ -135,7 +136,7 @@ canvas.webgl {
 
 .section__title-text {
   padding-left: .1ch;
-  font-size: min(18vw, 12rem);
+  font-size: min(36vw, 24rem);
 }
 
 .section__title-arrow {
@@ -151,14 +152,15 @@ canvas.webgl {
 }
 
 .section__paragraph {
-  max-width: 20ch;
-  align-self: flex-end;
-  font-size: 1.4rem;
+  max-width: none;
+  width: 100%;
+  align-self: auto;
+  font-size: large;
 }
 
 @media (max-width: 64em) {
   .section__paragraph {
-    font-size: 1.2rem;
+    font-size: large;
   }
 }
 

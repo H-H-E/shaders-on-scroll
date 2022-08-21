@@ -103,7 +103,7 @@ canvas.webgl
       padding-bottom: calc(min(9vw, 6rem))
 
   &:nth-child(even)
-    flex-direction: row-reverse
+    flex-direction: column
     background: $color-1
 
     .section__title
@@ -114,9 +114,12 @@ canvas.webgl
 
       .section__paragraph
         align-self: flex-start
+        text-align: center
+        
+        
+        
 
   &__title
-  
     text-align: left
     text-transform: uppercase
     opacity: .9
@@ -134,7 +137,7 @@ canvas.webgl
 
 
     &-text
-      font-size: min(18vw, 12rem)
+      font-size: min(36vw, 24rem)
       padding-left: .1ch
 
     &-arrow
@@ -149,12 +152,17 @@ canvas.webgl
         transform: rotate(90deg)
 
   &__paragraph
-    align-self: flex-end
-    max-width: 20ch
-    font-size: 1.4rem
+    align-self: auto
+    max-width: none
+    font-size: large
+    width: 100%
+
+
+    
+  
 
     @media (max-width: 64em)
-      font-size: 1.2rem
+      font-size: large
 
   &__button
     @extend %font-regular
