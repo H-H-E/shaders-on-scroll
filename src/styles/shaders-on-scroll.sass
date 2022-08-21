@@ -69,9 +69,10 @@ canvas.webgl
     height: 100vh
 
     &.js-mobile
-      @extend %absolute
+      
 
       height: auto
+      width: 100vw
 
       .scroll__content
         position: relative
@@ -115,6 +116,7 @@ canvas.webgl
       .section__paragraph
         align-self: flex-start
         text-align: center
+
         
         
         
@@ -123,6 +125,7 @@ canvas.webgl
     text-align: left
     text-transform: uppercase
     opacity: .9
+    font-size: 15vh
 
     @media (max-width: 64em)
       width: 100%
@@ -139,6 +142,7 @@ canvas.webgl
     &-text
       font-size: min(36vw, 24rem)
       padding-left: .1ch
+      width: 90%
 
     &-arrow
       font-size: min(9vw, 6rem)
@@ -155,7 +159,7 @@ canvas.webgl
     align-self: auto
     max-width: none
     font-size: large
-    width: 100%
+    width: 90vw
 
 
     
@@ -190,6 +194,10 @@ canvas.webgl
     width: 100%
     background-color: $color-white
     transform: scaleX(0)
+
+.wide 
+  width: 90%
+  
 
 
 
