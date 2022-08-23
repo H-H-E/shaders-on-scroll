@@ -1,14 +1,15 @@
-$color-1: #101bb652
-$color-2: #000000
-$color-black: black
+$color-1: #060401
+$color-2: #dd51b1
+$color-black: #281c80
 $color-white: white
 
+  
+
 @import url('https://use.typekit.net/zmc8vly.css')
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Corben:wght@700&family=Open+Sans:wght@800&display=swap')
 
 %font-regular
-  font-family: 'Catamaran', sans-serif
-  font-weight: 400
+  font-family: Catamaran, sans-serif
+  font-weight: 700
   font-style: normal
   letter-spacing: .1ch
 
@@ -32,7 +33,7 @@ $color-white: white
   position: absolute
 
 *
-  margin: 0
+  margin: 0 auto
   padding: 0
   box-sizing: border-box
 
@@ -60,7 +61,7 @@ canvas.webgl
   mix-blend-mode: screen
 
   @media (max-width: 64em)
-    opacity: .7
+    opacity: .8
 
 .scroll
   &__stage
@@ -69,10 +70,9 @@ canvas.webgl
     height: 100vh
 
     &.js-mobile
-      
+      @extend %absolute
 
       height: auto
-      width: 100vw
 
       .scroll__content
         position: relative
@@ -83,12 +83,12 @@ canvas.webgl
     will-change: transform
 
 .section
-  display: flex
+  display: block
   justify-content: space-evenly
   align-items: center
   width: 100%
   min-height: calc(100vh - 7rem)
-  padding: 8rem
+  padding: 7rem 
 
   @media (max-width: 64em)
     flex-direction: column
@@ -104,45 +104,46 @@ canvas.webgl
       padding-bottom: calc(min(9vw, 6rem))
 
   &:nth-child(even)
-    flex-direction: column
+    flex-direction: row-reverse
     background: $color-1
 
     .section__title
-      text-align: right
+      text-align: left
+      padding-bottom: calc(min(9vw, 6rem))
+
+      
 
     @media (max-width: 64em)
-      flex-direction: column
+      flex-direction: row
 
       .section__paragraph
         align-self: flex-start
-        text-align: center
+        max-width: 200ch !important 
 
-        
-        
-        
+       
+
 
   &__title
-    text-align: left
+    text-align: center
     text-transform: uppercase
     opacity: .9
-    font-size: 15vh
+    /*add some top padding*/
+    padding-top: calc(min(9vw, 6rem))
+    padding-bottom: calc(min(9vw, 6rem))
+    padding-right: calc(min(9vw, 6rem))
 
-    @media (max-width: 64em)
+
+    @media (max-width: 54em)
       width: 100%
 
     &-number
       font-size: min(36vw, 24rem)
 
-      
-        
-
-
-
-
     &-text
-      font-size: min(36vw, 24rem)
-      padding-left: .1ch
-      width: 90%
+      font-size: min(13vw, 10rem)
+      text-align: center
+      padding-bottom: calc(min(6vw, 3rem))
+
 
     &-arrow
       font-size: min(9vw, 6rem)
@@ -156,26 +157,31 @@ canvas.webgl
         transform: rotate(90deg)
 
   &__paragraph
-    align-self: auto
-    max-width: none
-    font-size: large
-    width: 90vw
-
-
-    
-  
+    align-self: flex-end
+    max-width: 50ch
+    font-size: 20rem
 
     @media (max-width: 64em)
-      font-size: large
+      font-size: 1.2rem
+
+  
+
+
+
+  
+    
 
   &__button
     @extend %font-regular
 
-    display: inline-block
-    margin: 5ch 0
-    padding: 2ch 5ch
+    display:  block
+    /*center button in section*/
+    margin: 2% auto 0ef
+    text-align: center
+    max-width: 33%
+    padding:0.5rem 1rem
     border: 2px solid currentColor
-    border-radius: 50%
+    border-radius: 90%
     font-size: .8em
     text-transform: uppercase
     letter-spacing: .1ch
@@ -184,7 +190,13 @@ canvas.webgl
 
     &:hover,
     &:focus
-      border: 2px solid $color-2
+      border: 3px solid $color-2
+  /*add video */
+
+
+
+
+
 
 .layout
   &__line
@@ -194,11 +206,4 @@ canvas.webgl
     width: 100%
     background-color: $color-white
     transform: scaleX(0)
-
-.wide 
-  width: 90%
-  
-
-
-
 
