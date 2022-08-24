@@ -9,12 +9,12 @@ $color-white: white
 
 %font-regular
   font-family: Catamaran, sans-serif
-  font-weight: 700
+  font-weight: 500
   font-style: normal
   letter-spacing: .1ch
 
 %font-title
-  font-weight: 500
+  font-weight: 700
   line-height: .75
 
 %top
@@ -33,7 +33,7 @@ $color-white: white
   position: absolute
 
 *
-  margin: 0 auto
+  margin: auto
   padding: 0
   box-sizing: border-box
 
@@ -84,7 +84,7 @@ canvas.webgl
 
 .section
   display: block
-  justify-content: space-evenly
+  justify-content: center
   align-items: center
   width: 100%
   min-height: calc(100vh - 7rem)
@@ -104,11 +104,11 @@ canvas.webgl
       padding-bottom: calc(min(9vw, 6rem))
 
   &:nth-child(even)
-    flex-direction: row-reverse
+    flex-direction: center 
     background: $color-1
 
     .section__title
-      text-align: left
+      text-align: center
       padding-bottom: calc(min(9vw, 6rem))
 
       
@@ -117,7 +117,7 @@ canvas.webgl
       flex-direction: row
 
       .section__paragraph
-        align-self: flex-start
+        align-self: center
         max-width: 200ch !important 
 
        
@@ -127,10 +127,8 @@ canvas.webgl
     text-align: center
     text-transform: uppercase
     opacity: .9
-    /*add some top padding*/
-    padding-top: calc(min(9vw, 6rem))
-    padding-bottom: calc(min(9vw, 6rem))
-    padding-right: calc(min(9vw, 6rem))
+    padding-top: calc(min(6vw, 3rem))
+    padding-bottom: calc(min(6vw, 3rem))
 
 
     @media (max-width: 54em)
@@ -142,7 +140,7 @@ canvas.webgl
     &-text
       font-size: min(13vw, 10rem)
       text-align: center
-      padding-bottom: calc(min(6vw, 3rem))
+      padding-bottom: calc(min(3vw, 1rem))
 
 
     &-arrow
@@ -157,7 +155,7 @@ canvas.webgl
         transform: rotate(90deg)
 
   &__paragraph
-    align-self: flex-end
+    align-self: center
     max-width: 50ch
     font-size: 20rem
 

@@ -37,8 +37,6 @@ body {
 	width: 90%
 
 
-
-
 }
 
 
@@ -122,8 +120,8 @@ a:focus-visible {
 
 .frame__title {
 	font-size: 1rem;
-	margin: 0 0 1rem;
-	font-weight: 500;
+	margin: 0 0 0;
+	font-weight: 700;
 }
 
 .frame__links {
@@ -161,7 +159,7 @@ a:focus-visible {
 
 	.frame {
 		position: fixed;
-		text-align: left;
+		text-align: center;
 		z-index: 100;
 		top: 0;
 		left: 0;
@@ -182,7 +180,7 @@ a:focus-visible {
 	.frame__title-wrap {
 		align-self: center;
 		grid-area: title;
-		display: flex;
+		display: center;
 	}
 
 	.frame__title {
