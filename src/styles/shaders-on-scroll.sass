@@ -29,7 +29,6 @@ $color-white: white
 
 %absolute
   @extend %top
-
   position: absolute
 
 *
@@ -41,7 +40,7 @@ body
   @extend %font-regular
 
   width: 100%
-  height: 100vh
+  height: 10vh
   overscroll-behavior: none
   color: $color-white
   background-color: $color-black
@@ -67,7 +66,7 @@ canvas.webgl
   &__stage
     @extend %fixed
 
-    height: 100vh
+    height: auto
 
     &.js-mobile
       @extend %absolute
@@ -87,21 +86,24 @@ canvas.webgl
   justify-content: center
   align-items: center
   width: 100%
-  min-height: calc(100vh - 7rem)
-  padding: 7rem 
+  min-height: 20vw
+  padding: 0
+  .centertext 
+      font-size: 1.5rem
+    
 
   @media (max-width: 64em)
     flex-direction: column
     justify-content: center
-    min-height: 100vh
-    padding: 10vh 2rem
+    min-height: 0vh
+    
 
     &:first-of-type
       gap: 0
 
   &:not(:first-of-type)
     .section__title
-      padding-bottom: calc(min(9vw, 6rem))
+      padding-bottom: 1rem
 
   &:nth-child(even)
     flex-direction: center 
@@ -110,6 +112,8 @@ canvas.webgl
     .section__title
       text-align: center
       padding-bottom: calc(min(9vw, 6rem))
+
+    
 
       
 
@@ -140,7 +144,7 @@ canvas.webgl
     &-text
       font-size: min(13vw, 10rem)
       text-align: center
-      padding-bottom: calc(min(3vw, 1rem))
+      padding-bottom: 1rem
 
 
     &-arrow
@@ -174,10 +178,11 @@ canvas.webgl
 
     display:  block
     /*center button in section*/
-    margin: 2% auto 0ef
+    margin: auto 
     text-align: center
     max-width: 33%
-    padding:0.5rem 1rem
+    min-height: 33%
+    padding:2vw
     border: 2px solid currentColor
     border-radius: 90%
     font-size: .8em
