@@ -113,8 +113,8 @@ canvas.webgl {
   }
 
   .section:nth-child(2n) .section__paragraph {
+    text-align: center;
     align-self: center;
-    max-width: 200ch !important;
   }
 }
 
@@ -139,7 +139,7 @@ canvas.webgl {
 .section__title-text {
   text-align: center;
   padding-bottom: 1rem;
-  font-size: min(13vw, 10rem);
+  font-size: 13vw;
 }
 
 .section__title-arrow {
