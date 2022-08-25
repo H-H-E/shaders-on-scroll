@@ -28,8 +28,8 @@ body {
 	text-align: center;
 	line-height: normal;
 	/*make it seperate from video in another column*/
-	display: flex;
-	flex-direction: row;
+	display: block;
+	flex-direction: column;
 	justify-content: center;
 	/*give text some padding all around*/
 	width: 90%

@@ -24,10 +24,10 @@ body {
 .centertext {
   text-align: center;
   width: 90% font-size: 5vw;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   line-height: normal;
-  display: flex;
+  display: block;
 }
 
 .js .loading:before, .js .loading:after {
